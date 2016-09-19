@@ -4,7 +4,7 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title webdesignio boilerplate
+    title Webdesign.io
 
     link(rel='apple-touch-icon-precomposed', sizes='57x57', href=asset('/ico/apple-touch-icon-57x57.png'))
     link(rel='apple-touch-icon-precomposed', sizes='114x114', href=asset('/ico/apple-touch-icon-114x114.png'))
@@ -28,12 +28,41 @@ html
     meta(name='msapplication-square310x310logo', content=asset('/ico/mstile-310x310.png'))
 
     link(href=asset('/css/bootstrap.min.css') rel='stylesheet')
+    link(href=asset('/css/style.css') rel='stylesheet')
+    link(href=asset('/css/icons.css') rel='stylesheet')
 
   body
-    .logo
-      div(style='text-transform:uppercase' data-component='Inplace' data-props='{"name":"logo"}')
-    .header
-      h1.page-header(data-component='Inplace', data-props='{"name":"header"}')
+    header.header.container
+      h1.logo.pull-left Webdesign.io
+      nav.header-nav.pull-right
+        ul.list-inline
+          li
+            a(href) Documentation
+          li
+            a(href) Log In
     block content
-    div(data-webdesignio-remove data-component='Toolbar')
+    footer.footer
+      .container: .row
+        .col-md-3
+          h5.text-white.mb-20 Get In Touch
+          p: a(href) hello@webdesign.io
+          p.mt-20
+            | Anne-Frank-Weg 14
+            br
+            | 89075 Ulm
+            br
+            | Deutschland
+        .col-md-6.footer-logo
+        .col-md-3.text-right
+          h5.text-white.mb-20 Share The Love
+          ul.social.list-inline
+            li
+              a(href).social-icon.icon-twitter
+            li
+              a(href).social-icon.icon-facebook
+            li
+              a(href).social-icon.icon-linkedin
+        .col-md-12.text-center.mt-60
+          p.op-02 © Webdesign.io — All rights reserved.
+    //- div(data-webdesignio-remove data-component='Toolbar')
     script(data-webdesignio-remove src=asset('/client.js'))
