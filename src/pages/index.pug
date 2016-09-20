@@ -1,29 +1,33 @@
 extends ../includes/base
 
 block content
+
   section.hero
     .container: .row
-      .hero-text.text-center.col-sm-10.col-sm-offset-1
-        h1 Not just a better CMS
-        h6.subheading How about a simple, super easy to use CMS that adapts to your workflow?
-        a.btn.btn-lg START USING IT NOW
+      .hero-text.text-center
+        h1.mb-0.mt-30 Not just a better CMS
+        h6.subheading.mt-0 How about a simple, super easy to use CMS that adapts to your workflow?
+        a.btn.btn-lg.mt-30 START USING IT NOW
+    .mountain-1(data-stellar-ratio="0.8")
+    .mountain-2(data-stellar-ratio="0.5")
 
-  section.sad-penguin.bg-dark.pt-120.pb-80
+  section.sad-penguin.bg-dark.pt-80.pb-80
+    .arrow-down
     .container: .row
-      .col-md-6
-        h2.text-white Are you frustated with your current CMS?
-        p.text-large.text-white.
+      .col-md-6.col-md-offset-1
+        h2.text-white.mt-140 Are you frustated with your current CMS?
+        p.text-large.text-white.mt-30.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      .col-md-6
+      .col-md-5.text-center
         img(src=asset('img/sad-penguin.svg'))
 
   section.super-penguin.pt-140.pb-140
     .container: .row.mt-140
-      .col-md-6
+      .col-md-4.mt-60.text-right
         img(src=asset('img/super-penguin.svg'))
-      .col-md-6
+      .col-md-6.col-md-offset-1.mt-60
         h2 A better way to build for web. But also much more.
-        p.text-large.
+        p.text-large.mt-30.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
   section.penguin-way.bg-light.pt-120.pb-40
@@ -186,3 +190,11 @@ block content
               h5.text-white SCALEABLE
               p.
                 Buying the right telescope to take your love of astronomy to the next level is a big next step in the development of your passion for the stars.
+
+block scripts
+
+  script(src=asset("js/vendor/jquery.stellar.js"))
+  script.
+    $(function(){
+      $.stellar();
+    });

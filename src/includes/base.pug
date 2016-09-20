@@ -32,14 +32,15 @@ html
     link(href=asset('/css/icons.css') rel='stylesheet')
 
   body
-    header.header.container
-      h1.logo.pull-left Webdesign.io
-      nav.header-nav.pull-right
-        ul.list-inline
-          li
-            a(href) Documentation
-          li
-            a(href) Log In
+    header.header
+      .container
+        h1.logo.pull-left Webdesign.io
+        nav.header-nav.pull-right
+          ul.list-inline
+            li
+              a(href) Documentation
+            li
+              a(href) Log In
     block content
     footer.footer
       .container: .row
@@ -64,5 +65,10 @@ html
               a(href).social-icon.icon-linkedin
         .col-md-12.text-center.mt-60
           p.op-02 © Webdesign.io — All rights reserved.
+
     //- div(data-webdesignio-remove data-component='Toolbar')
     script(data-webdesignio-remove src=asset('/client.js'))
+    script(src=asset("js/vendor/jquery.min.js"))
+    script(src=asset("js/scripts.js"))
+
+    block scripts

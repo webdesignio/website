@@ -113,7 +113,6 @@ a:focus {
  ** 3. GENERAL
  */
 
-
 /** 3.1 Misc */
 
 section {
@@ -127,11 +126,13 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   border-radius: 0;
+  transition: all .2s;
 }
 
 .btn:hover,
 .btn:focus {
   color: inherit;
+  opacity: 1;
 }
 
 .btn-lg {
@@ -139,6 +140,14 @@ section {
   color: white;
   font-size: 1.6rem;
   padding: 2rem 3.6rem;
+  box-sizing: border-box;
+}
+
+.btn-lg:hover,
+.btn-lg:focus {
+  color: white;
+  background: #ff8a00;
+  box-shadow: 0 10px 15px rgba(233, 122, 21, 0.1);
 }
 
 .op-02 {
@@ -157,7 +166,12 @@ section {
 /** 3.2 Header */
 
 .header {
-  padding: 7rem 15px;
+  padding: 7rem 15px 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
 }
 
 h1.logo {
@@ -176,29 +190,95 @@ h1.logo {
   color: rgba(0, 0, 0, 0.4);
   letter-spacing: 0.25px;
   border: none;
+  line-height: 3rem;
+  vertical-align: middle;
 }
 
 
-/** Penguin Way */
+/** Hero */
 
-.super-penguin:after {
+.hero {
+  min-height: 640px;
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  height: 100%;
+}
+
+.hero .row {
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.hero-text {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.mountain-1,
+.mountain-2 {
+  position: absolute;
+  bottom: -12rem;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.mountain-1 {
+  background: url('../img/mountain-1.svg') no-repeat center bottom;
+  z-index: -1;
+}
+
+.mountain-2 {
+  background: url('../img/mountain-2.svg') no-repeat center bottom;
+  z-index: -2;
+}
+
+
+/** Sad Penguin */
+
+.sad-penguin .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-top: 3rem solid #FFC000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -3rem;
+}
+
+
+/** Super Penguin */
+
+section.super-penguin:after {
   content: '';
   display: block;
   position: absolute;
   top: -1px;
   width: 100%;
   height: 20rem;
-  background: url('../img/bg-superpenguin.svg') no-repeat center bottom white;
+  background: url('../img/bg-superpenguin.svg') no-repeat center top white;
   background-size: cover;
 }
-
 
 /** Penguin Way */
 
 .penguin-way li {
   margin-bottom: 10rem;
 }
-
 
 /** How It Works */
 
@@ -301,7 +381,7 @@ h1.logo {
   bottom: -1px;
   width: 100%;
   height: 20rem;
-  background: url('../img/bg-features.svg') no-repeat center bottom #3E3C5C;
+  background: url('../img/bg-features.svg') no-repeat center bottom #3B3959;
   background-size: cover;
 }
 
