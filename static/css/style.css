@@ -5,10 +5,8 @@
  ** CONTENTS
  **
  ** 1. Typography
- ** 2. Layout
- ** 3. General
- ** 3.1 Misc
- ** 3.2 Header
+ ** 2. General
+ ** 3. Layout
  */
 
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
@@ -108,12 +106,49 @@ a:focus {
   opacity: .8;
 }
 
+@media (max-width: 767px) {
+  h1 {
+    font: 5rem/110% 'Work Sans', Helvetica, sans-serif;
+    font-weight: 200;
+  }
+  h2 {
+    font: 3.6rem/120% 'Work Sans', Helvetica, sans-serif;
+    font-weight: 300;
+  }
+  h3 {
+    font: 2.4rem/120% 'Work Sans', Helvetica, sans-serif;
+    font-weight: 300;
+  }
+  h4 {
+    font: 1.6rem/150% 'Work Sans', Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  h5 {
+    font: 1.3rem/150% 'Work Sans', Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  p,
+  pre,
+  code {
+    font: 1.5rem/145% 'Source Sans Pro', Helvetica, sans-serif;
+    font-weight: 400;
+    opacity: .6;
+  }
+  .text-large {
+    font-size: 1.8rem;
+  }
+  .subheading {
+    font: 2rem 'Source Sans Pro', Helvetica, sans-serif;
+  }
+}
+
 
 /**
- ** 3. GENERAL
+ ** 2. GENERAL
  */
 
-/** 3.1 Misc */
+
+/** 2.1 Misc */
 
 section {
   width: 100%;
@@ -162,8 +197,15 @@ section {
   background: #F4F5F7;
 }
 
+@media (max-width: 991px) {
+  .btn-lg {
+    font-size: 1.4rem;
+    padding: 1.6rem 2.4rem;
+  }
+}
 
-/** 3.2 Header */
+
+/** 2.2 Header */
 
 .header {
   padding: 7rem 15px 1rem;
@@ -192,10 +234,25 @@ h1.logo {
   border: none;
   line-height: 3rem;
   vertical-align: middle;
+  margin-left: 1rem;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 3rem 15px 1rem;
+  }
+  .header-nav {
+    text-align: left;
+    padding-top: 1.5rem;
+  }
+  .header-nav a {
+    margin-left: 0;
+    font-size: 1.4rem;
+  }
 }
 
 
-/** Hero */
+/** 2.3 Hero */
 
 .hero {
   min-height: 640px;
@@ -233,6 +290,7 @@ h1.logo {
   width: 100%;
   background-size: cover;
   background-attachment: fixed;
+  transform: translateX(0);
 }
 
 .mountain-1 {
@@ -245,8 +303,19 @@ h1.logo {
   z-index: -2;
 }
 
+@media (max-width: 767px) {
+  .hero {
+    min-height: 480px;
+    height: 90%;
+  }
+  .mountain-1,
+  .mountain-2 {
+    bottom: 0;
+  }
+}
 
-/** Sad Penguin */
+
+/** 2.4 Sad Penguin */
 
 .sad-penguin .arrow-down {
   width: 0;
@@ -258,29 +327,82 @@ h1.logo {
   top: 0;
   left: 50%;
   margin-left: -3rem;
+  cursor: pointer;
 }
 
 
-/** Super Penguin */
+/** 2.5 Super Penguin */
 
-section.super-penguin:after {
+.super-penguin:after {
   content: '';
   display: block;
   position: absolute;
   top: -1px;
   width: 100%;
-  height: 20rem;
+  height: 100%;
   background: url('../img/bg-superpenguin.svg') no-repeat center top white;
-  background-size: cover;
+  background-size: contain;
+  z-index: -1;
 }
 
-/** Penguin Way */
+.super-penguin img,
+.sad-penguin img {
+  max-width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .super-penguin img {
+    transform: translateX(-10%);
+  }
+}
+
+@media (max-width: 991px) {
+  .super-penguin img {
+    transform: translateX(-20%);
+  }
+}
+
+@media (max-width: 767px) {
+  .super-penguin img {
+    transform: translateX(-10%);
+  }
+}
+
+
+/** 2.6 Penguin Way */
+
+.penguin-way {
+  background-image: url('../img/bg-penguins.svg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
 
 .penguin-way li {
   margin-bottom: 10rem;
 }
 
-/** How It Works */
+.penguin-way img {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .penguin-way li {
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .penguin-way img {
+    max-width: 60%;
+  }
+  .penguin-way li {
+    margin-bottom: 4rem;
+  }
+}
+
+
+/** 2.7 How It Works */
 
 .browser {
   border: 1px solid #D6D7D9;
@@ -321,8 +443,14 @@ section.super-penguin:after {
   background: #3CD64A;
 }
 
+@media (max-width: 767px) {
+  .browser {
+    margin: 0 15px;
+  }
+}
 
-/** Get Started */
+
+/** 2.8 Get Started */
 
 .get-started {
   background: url('../img/noisy_grid.jpg') #1280DA;
@@ -372,7 +500,7 @@ section.super-penguin:after {
 }
 
 
-/** Features */
+/** 2.9 Features */
 
 .features:after {
   content: '';
@@ -380,9 +508,10 @@ section.super-penguin:after {
   position: absolute;
   bottom: -1px;
   width: 100%;
-  height: 20rem;
-  background: url('../img/bg-features.svg') no-repeat center bottom #3B3959;
-  background-size: cover;
+  height: 100%;
+  background: url('../img/bg-features.svg') no-repeat center bottom;
+  background-size: contain;
+  z-index: -1;
 }
 
 .feature-icon {
@@ -390,10 +519,26 @@ section.super-penguin:after {
   width: 100%;
   text-align: center;
   color: #FFC000;
+  line-height: 1.2 !important;
+  vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+  .feature-icon {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-icon {
+    text-align: left;
+    font-size: 3rem;
+  }
 }
 
 
-/** 3.2 Footer */
+
+/** 2.10 Footer */
 
 .footer {
   background: #FF8919;
@@ -419,9 +564,31 @@ section.super-penguin:after {
   margin-left: 2.5rem;
 }
 
+@media (max-width: 991px) {
+  .social a.social-icon {
+    font-size: 4rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 0 0 4rem;
+    text-align: center;
+  }
+  .social,
+  .footer h5 {
+    text-align: center;
+  }
+  .social a.social-icon {
+    font-size: 4.4rem;
+    margin-right: 2rem;
+  }
+}
+
 
 /**
- ** 2. LAYOUT
+ ** 3. LAYOUT
  */
 
 html,

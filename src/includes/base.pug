@@ -33,9 +33,10 @@ html
 
   body
     header.header
-      .container
-        h1.logo.pull-left Webdesign.io
-        nav.header-nav.pull-right
+      .container: .row
+        .col-sm-4.col-xs-12
+          h1.logo Webdesign.io
+        nav.header-nav.col-sm-8.col-xs-12.text-right
           ul.list-inline
             li
               a(href) Documentation
@@ -44,7 +45,7 @@ html
     block content
     footer.footer
       .container: .row
-        .col-md-3
+        .col-md-3.col-sm-4.col-xs-12
           h5.text-white.mb-20 Get In Touch
           p: a(href) hello@webdesign.io
           p.mt-20
@@ -53,8 +54,8 @@ html
             | 89075 Ulm
             br
             | Deutschland
-        .col-md-6.footer-logo
-        .col-md-3.text-right
+        .col-md-6.col-sm-4.footer-logo.hidden-xs
+        .col-md-3.col-sm-4.col-xs-12.text-right.mt-xs-30
           h5.text-white.mb-20 Share The Love
           ul.social.list-inline
             li
@@ -63,7 +64,7 @@ html
               a(href).social-icon.icon-facebook
             li
               a(href).social-icon.icon-linkedin
-        .col-md-12.text-center.mt-60
+        .col-xs-12.text-center.mt-60.mt-xs-40
           p.op-02 © Webdesign.io — All rights reserved.
 
     //- div(data-webdesignio-remove data-component='Toolbar')
