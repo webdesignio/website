@@ -84,6 +84,7 @@ code.text-white,
 
 .text-large {
   font-size: 2rem;
+  opacity: .5;
 }
 
 .text-white {
@@ -145,7 +146,7 @@ section {
 }
 
 .bg-dark {
-  background: #3E3C5C;
+  background: #3B3959;
 }
 
 .bg-light {
@@ -175,6 +176,20 @@ h1.logo {
   color: rgba(0, 0, 0, 0.4);
   letter-spacing: 0.25px;
   border: none;
+}
+
+
+/** Penguin Way */
+
+.super-penguin:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  width: 100%;
+  height: 20rem;
+  background: url('../img/bg-superpenguin.svg') no-repeat center bottom white;
+  background-size: cover;
 }
 
 
