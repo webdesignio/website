@@ -98,7 +98,7 @@ block content
         ul.list-unstyled.col-md-6.col-md-offset-3.col-sm-10.col-sm-offset-1
           li
             p.text-large
-              | Use node.js version 6 or newer
+              strong Use node.js version 6 or newer
           li
             p.text-large
               | Install the command-line tool
@@ -106,38 +106,9 @@ block content
               code.text-large npm install -g @webdesignio/cli
           li
             p.text-large
-              code.text-large git clone https://github.com/webdesignio/website-boilerplate.git
-          li
-            p.text-large
-              code.text-large cd website-boilerplate
-          li
-            p.text-large
-              code.text-large npm install && npm install --global surge
-          li
-            p.text-large
-              code.text-large webdesignio login https://webdesignio.de
-          li
-            p.text-large
-              code.text-large surge login
-          li
-            p.text-large
-              code.text-large cat ~/.netrc
-          li
-            p.text-large
-              | and add the login data to ./.webdesigniorc.json, it should look like:
+              | Get started
               br
-              pre.text-large.
-                {
-                  "url": "https://webdesignio.de",
-                  "id": "pa1nd",
-                  "token": "...",
-                  "config": {
-                  "domain": "some_subdomain.surge.sh",
-                  "surge": {
-                  "email": "...",
-                  "token": "..."
-                },
-                  "driver": "surge"
+              code.text-large webdesignio init mywebsite
 
   section.features.bg-dark.pt-120.pt-md-100.pt-sm-80.pt-xs-60.pb-140.pb-md-120.pb-sm-100
     .container: .row.pb-100
