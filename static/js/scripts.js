@@ -25,7 +25,6 @@ $(function() {
     $('.values-container .clearfix').remove();
 
     if (w > 767) {
-      alert('op');
       $('.values-container li:nth-child(2n)').after( '<div class="clearfix"></div>' );
     };
 
