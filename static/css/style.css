@@ -341,7 +341,7 @@ h1.logo {
   width: 100%;
   height: 100%;
   background: url('../img/bg-superpenguin.svg') no-repeat center top white;
-  background-size: contain;
+  background-size: 105%;
   z-index: -1;
 }
 
@@ -384,6 +384,32 @@ h1.logo {
 
 .penguin-way img {
   max-width: 100%;
+}
+
+.values-container {
+  width: 100%;
+}
+
+.value {
+  margin: 0;
+  width:50%;
+  display:block;
+  float:left;
+  box-sizing: border-box;
+}
+
+.value:nth-child(2n + 0) {
+  float: right;
+}
+
+.value:after {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 20px;
+  clear: both;
+  position: absolute;
+  float: left;
 }
 
 @media (max-width: 991px) {
@@ -502,6 +528,10 @@ h1.logo {
 
 /** 2.9 Features */
 
+.features {
+  z-index: -2;
+}
+
 .features:after {
   content: '';
   display: block;
@@ -510,8 +540,8 @@ h1.logo {
   width: 100%;
   height: 100%;
   background: url('../img/bg-features.svg') no-repeat center bottom;
-  background-size: contain;
-  z-index: 1;
+  background-size: 105%;
+  z-index: -1;
 }
 
 .feature-icon {
@@ -543,6 +573,7 @@ h1.logo {
 .footer {
   background: #FF8919;
   padding: 6rem 0 4rem;
+  z-index: 999;
 }
 
 .footer .footer-logo {
