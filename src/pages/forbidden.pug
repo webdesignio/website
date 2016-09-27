@@ -1,0 +1,41 @@
+extends ../includes/base
+
+block navigation
+
+  header.header
+    .container: .row
+      .col-sm-4.col-xs-12
+        h1.logo Webdesign.io
+      nav.header-nav.col-sm-8.col-xs-12.text-right
+        ul.list-inline
+          li
+            a(href='./') Home
+          li
+            a(href) Log In
+
+block content
+
+  section.hero.hero-inner
+    .container: .row
+      .hero-text.text-center.pt-60.pb-40.col-md-8.col-md-offset-2
+        h1.mb-0.mt-30.mt-xs-60(data-component='Inplace' data-props='{"name":"title"}') Avast!
+        h6.subheading.mt-0(data-component='Inplace' data-props='{"name":"title2"}') You’re trying to enter an area that’s forbidden for you
+
+  section.error-404.pb-140
+    .container.pb-140
+      .row
+        .col-sm-8.col-sm-offset-2.text-center
+          img(src=asset('/img/forbidden-penguin.svg'))
+      .row
+        .col-sm-6.col-sm-offset-3.text-center
+          p.text-large.mb-20.mt-80 Did you log out of your account?
+          a.btn.btn-lg LOG IN
+
+
+block scripts
+
+  script(src=asset('/js/vendor/jquery.stellar.js'))
+  script.
+    $(function(){
+      $.stellar({ responsive: true });
+    });

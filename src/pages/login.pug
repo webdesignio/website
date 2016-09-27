@@ -1,6 +1,40 @@
-doctype html
-html
-  head
-  body
-    div(data-component='LoginForm')
-    script(data-webdesignio-remove src=asset('/client.js'))
+extends ../includes/base
+
+block navigation
+
+  header.header
+    .container: .row
+      .col-sm-4.col-xs-12
+        h1.logo Webdesign.io
+
+block content
+
+  section.hero.hero-inner
+    .container
+      .form.text-center.pt-120.pb-140
+        form.pb-100
+          .row
+            .form-group.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.mb-10
+              label: h5 Username
+              input(type='text').form-control.text-center
+          .row
+            .form-group.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.mb-10
+              label: h5 Password
+              input(type='password').form-control.text-center
+            .forgot-link.col-md-4.col-sm-3.text.text-left.text-xs-center.mt-40.mt-xs-0.pt-10
+              a(href) forgot?
+
+          .row
+            .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.mt-20
+              button.btn.btn-lg.btn-block() Log In
+
+    .mountain-1
+    .mountain-2
+
+block scripts
+
+  script(src=asset('/js/vendor/jquery.stellar.js'))
+  script.
+    $(function(){
+      $.stellar({ responsive: true });
+    });

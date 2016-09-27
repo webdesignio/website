@@ -6,7 +6,9 @@
  **
  ** 1. Typography
  ** 2. General
- ** 3. Layout
+ ** 3. Pricing
+ ** 4. Boilerplate
+ ** 5. Layout
  */
 
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
@@ -203,11 +205,12 @@ section {
 .btn-switch .btn.active {
   background: #3D3B5C;
   border-color: #3D3B5C;
+  border-left: 1px solid #3D3B5C;
   color: white;
 }
 
 .btn-switch .btn.active + .btn {
-  border-left: 1px solid #3D3B5C;
+  border-left: none;
 }
 
 .op-02 {
@@ -220,6 +223,36 @@ section {
 
 .bg-light {
   background: #F4F5F7;
+}
+
+.bg-light-blue {
+  background: #DAE8F8;
+}
+
+.row.list-inline li {
+  padding: 0 4rem;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+input.form-control {
+  border: 1px solid #B9B7CF;
+  background: white;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 1.7rem;
+  line-height: 2;
+  padding: .5rem 1.5rem;
+  height: auto;
+  margin-top: 0;
+}
+
+@media (min-width: 992px) {
+  .row.list-inline li {
+    padding: 0 4rem;
+  }
 }
 
 @media (max-width: 991px) {
@@ -572,7 +605,8 @@ h1.logo {
   z-index: -2;
 }
 
-.features:after {
+.features:after,
+.error-404:after {
   content: '';
   display: block;
   position: absolute;
@@ -644,7 +678,7 @@ h1.logo {
 
 @media (max-width: 767px) {
   .footer {
-    padding: 0 0 4rem;
+    padding: 4rem 0 4rem;
     text-align: center;
   }
   .social,
@@ -665,10 +699,11 @@ h1.logo {
   background: url('../img/bg-pricing.svg') no-repeat center top #F0F6FB;
   background-size: contain;
   transform: translateX(0);
-  z-index: -1;
+  z-index: -2;
 }
 
-.pricing-table:after {
+.pricing-table:after,
+.starter-info:after {
   content: '';
   display: block;
   position: absolute;
@@ -770,7 +805,15 @@ h1.logo {
 }
 
 /**
- ** 3. LAYOUT
+ ** 4. BOILERPLATE
+ */
+
+.starter-info {
+  z-index: -2;
+}
+
+/**
+ ** 5. LAYOUT
  */
 
 html,
@@ -779,6 +822,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 767px) {
+  .text-xs-center {
+    text-align: center;
+  }
 }
 
 .m-0 {
