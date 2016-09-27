@@ -17,23 +17,24 @@ $(function() {
   });
 
 
-  // Values clearfix
+  // Grids clearfix
 
-  function valuesClearfix() {
+  function gridsClearfix(gridContainer, gridElement) {
     var w = $(window).width();
 
-    $('.values-container .clearfix').remove();
+    $(gridContainer + ' .clearfix').remove();
 
     if (w > 767) {
-      $('.values-container li:nth-child(2n)').after( '<div class="clearfix"></div>' );
+      $(gridContainer + ' ' + gridElement + ':nth-child(2n)').after( '<div class="clearfix"></div>' );
     };
-
   }
 
-  valuesClearfix();
+  gridsClearfix('.values-container', 'li');
+  gridsClearfix('.features', 'li');
 
   $(window).resize(function() {
-    valuesClearfix();
+    gridsClearfix('.values-container', 'li');
+    gridsClearfix('.features', 'li');
   })
 
 })
