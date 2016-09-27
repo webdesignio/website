@@ -4,78 +4,82 @@ block content
 
   section.hero.hero-inner
     .container: .row
-      .hero-text.text-center.pt-60.pb-60.col-md-8.col-md-offset-2
-        h1.mb-0.mt-30.mt-xs-60(data-component='Inplace' data-props='{"name":"title"}') Become a Penguin
+      .hero-text.text-center.pt-60.pt-xs-20.pb-60.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        h1.mb-20.mt-30(data-component='Inplace' data-props='{"name":"title"}') Become a Penguin
         h6.subheading.mt-0(data-component='Inplace' data-props='{"name":"title2"}') The starter product that includes everything you need. Prepare your website. Include all components you need. Bring it online. Change it online. Deploy it to static files at *.surge.sh website.
 
   section.pricing-table.pb-140
     .container
       .row
-        .btn-switch.col-sm-6.col-sm-offset-3
+        .btn-switch.col-sm-6.col-sm-offset-3.col-xs-10.col-xs-offset-1
           .row
             .btn.col-xs-6.active Yearly Plans
             .btn.col-xs-6 Monthly Plans
 
-      .row.table-plans.pt-60
-        .private.plan.col-sm-4.text-center
-          h4 Private Penguin
+      .row.table-plans.pt-60.pt-xs-20
+
+        .private.plan.col-sm-4.col-xs-10.col-xs-offset-1.text-center
+          h4 Private <br> Penguin
           h2 Free
           .text.period &nbsp;
-          ul.details.list-unstyled.text.mt-60
+          ul.details.list-unstyled.text.mt-60.mt-xs-40
             li <strong>1</strong> website
             li <strong>1</strong> content editor (user) per website
             li <strong>10mb</strong> database storage
             li <strong>100mb</strong> for assets
             li ×
-          a.btn.btn-lg.mt-30(href='/#start') Use the CLI
-        .productive.plan.col-sm-4.text-center.featured
-          h4 Productive Penguin
+          a.btn.btn-lg.mt-30.mt-xs-10(href='/#start') Use the CLI
+
+        .productive.plan.col-sm-4.col-xs-10.col-xs-offset-1.text-center.featured
+          h4 Productive <br> Penguin
           h2 €49
           .text.period per month
-          ul.details.list-unstyled.text.mt-60
+          ul.details.list-unstyled.text.mt-60.mt-xs-40
             li <strong>3</strong> website
             li <strong>3</strong> content editor (user) per website
             li <strong>10mb</strong> database storage
             li <strong>100mb</strong> for assets
             li ×
-          a.btn.btn-lg.mt-30(href='mailto:hello@webdesignio.com') Contact us
-        .powww.plan.col-sm-4.text-center
-          h4 Powww Penguin
+          a.btn.btn-lg.mt-30.mt-xs-10(href='mailto:hello@webdesignio.com') Contact us
+
+        .powww.plan.col-sm-4.col-xs-10.col-xs-offset-1.text-center
+          h4 Powww <br> Penguin
           h2 €500
           .text.period per month
-          ul.details.list-unstyled.text.mt-60
+          ul.details.list-unstyled.text.mt-60.mt-xs-40
             li <strong>20</strong> website
             li <strong>20</strong> content editor (user) per website
             li <strong>20mb</strong> database storage
             li <strong>1000mb</strong> for assets
             li <strong>Super Service</strong>
-          a.btn.btn-lg.mt-30(href='mailto:hello@webdesignio.com') Contact us
+          a.btn.btn-lg.mt-30.mt-xs-10(href='mailto:hello@webdesignio.com') Contact us
 
-      .row.included-features.pt-100.pb-140
+      .row.included-features.pt-100.pt-xs-20.pb-100.pb-sm-60.pb-xs-0
         h3.col-sm-12.text-center.mb-60 Included in all plans:
-        ul.row.list-inline
-          li.col-sm-3.text-center
-            .icon-large.icon-web-design.mb-20
-            p.text-large
-              | Inplace components
-              br
-              | (all 8 components to change contents)
-          li.col-sm-3.text-center
-            .icon-large.icon-cloud-computing.mb-20
-            p.text-large
-              | Change the website online using our servers
-              br
-              | (at *.webdesignio.com)
-          li.col-sm-3.text-center
-            .icon-large.icon-infinite-symbol.mb-20
-            p.text-large
-              | Unlimited deploys
-          li.col-sm-3.text-center
-            .icon-large.icon-cube.mb-20
-            p.text-large
-              | Deploy to surge.sh
-              br
-              | (on AWS S3 systems)
+        .col-sm-12
+          ul.row.list-inline
+            li.col-md-3.col-sm-6.col-xs-12.text-center.mb-40
+              .icon-large.icon-web-design.mb-20.mb-xs-0
+              p.text-large
+                | Inplace components
+                br
+                | (all 8 components to change contents)
+            li.col-md-3.col-sm-6.col-xs-12.text-center.mb-40
+              .icon-large.icon-cloud-computing.mb-20.mb-xs-0
+              p.text-large
+                | Change the website online using our servers
+                br
+                | (at *.webdesignio.com)
+            li.col-md-3.col-sm-6.col-xs-12.text-center.mb-40
+              .icon-large.icon-infinite-symbol.mb-20.mb-xs-0
+              p.text-large
+                | Unlimited deploys
+            li.col-md-3.col-sm-6.col-xs-12.text-center.mb-40
+              .icon-large.icon-cube.mb-20.mb-xs-0
+              p.text-large
+                | Deploy to surge.sh
+                br
+                | (on AWS S3 systems)
 
 block scripts
 

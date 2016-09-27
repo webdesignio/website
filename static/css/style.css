@@ -102,6 +102,11 @@ a {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.75);
 }
 
+a.text-white,
+.text-white a {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.75);
+}
+
 a:hover,
 a:focus {
   text-decoration: none;
@@ -165,6 +170,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 0;
+  -webkit-transition: all .2s;
   transition: all .2s;
   font-size: 1.1rem;
   line-height: 1;
@@ -209,7 +215,7 @@ section {
   color: white;
 }
 
-.btn-switch .btn.active + .btn {
+.btn-switch .btn.active+.btn {
   border-left: none;
 }
 
@@ -229,10 +235,6 @@ section {
   background: #DAE8F8;
 }
 
-.row.list-inline li {
-  padding: 0 4rem;
-}
-
 label {
   margin-bottom: 0;
 }
@@ -249,9 +251,26 @@ input.form-control {
   margin-top: 0;
 }
 
-@media (min-width: 992px) {
+.row.list-inline li {
+  padding: 0 4rem;
+}
+
+.icon-large {
+  font-size: 7.5rem;
+  width: 100%;
+  text-align: center;
+  color: #8481A6;
+  line-height: 1.2 !important;
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 1199px) {
   .row.list-inline li {
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
 }
 
@@ -259,6 +278,9 @@ input.form-control {
   .btn-lg {
     font-size: 1.4rem;
     padding: 1.6rem 2.4rem;
+  }
+  .row.list-inline li {
+    padding: 0 1.5rem;
   }
 }
 
@@ -295,13 +317,68 @@ h1.logo {
   margin-left: 1rem;
 }
 
-.icon-large {
-  font-size: 7.5rem;
+.burger-menu {
+  display: none;
+  float: right;
+  width: 3rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 3.6rem;
+  right: 30px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: block;
+  position: absolute;
+  height: .4rem;
   width: 100%;
-  text-align: center;
-  color: #8481A6;
-  line-height: 1.2 !important;
-  vertical-align: middle;
+  background: #3D3B5C;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.burger-menu span:nth-child(1) {
+  top: 0px;
+}
+
+.burger-menu span:nth-child(2),
+.burger-menu span:nth-child(3) {
+  top: 1rem;
+}
+
+.burger-menu span:nth-child(4) {
+  top: 2rem;
+}
+
+.burger-menu.open span:nth-child(1) {
+  top: 1rem;
+  width: 0%;
+  left: 50%;
+}
+
+.burger-menu.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.burger-menu.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.burger-menu.open span:nth-child(4) {
+  top: 1rem;
+  width: 0%;
+  left: 50%;
 }
 
 @media (max-width: 767px) {
@@ -310,11 +387,30 @@ h1.logo {
   }
   .header-nav {
     text-align: left;
-    padding-top: 1.5rem;
+    background: white;
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    left: 0;
+    min-height: auto;
+    height: 0;
+    overflow: hidden;
+    padding-left: 30px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header-nav ul {
+    margin-bottom: 4.5rem;
+  }
+  .header-nav li {
+    display: block;
+    margin: 1.5rem 0;
   }
   .header-nav a {
     margin-left: 0;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+  }
+  .burger-menu {
+    display: block;
   }
 }
 
@@ -363,7 +459,8 @@ h1.logo {
   width: 100%;
   background-size: cover;
   background-attachment: fixed;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .mountain-1 {
@@ -376,10 +473,22 @@ h1.logo {
   z-index: -2;
 }
 
+@media (max-width: 991px) {
+  .mountain-1,
+  .mountain-2 {
+    bottom: -60px;
+  }
+}
+
 @media (max-width: 767px) {
   .hero {
     min-height: 480px;
     height: 90%;
+  }
+  .hero-inner {
+    min-height: 100px;
+    height: auto;
+    padding-top: 12rem;
   }
   .mountain-1,
   .mountain-2 {
@@ -425,19 +534,22 @@ h1.logo {
 
 @media (max-width: 1199px) {
   .super-penguin img {
-    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
   }
 }
 
 @media (max-width: 991px) {
   .super-penguin img {
-    transform: translateX(-20%);
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
   }
 }
 
 @media (max-width: 767px) {
   .super-penguin img {
-    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
   }
 }
 
@@ -457,32 +569,6 @@ h1.logo {
 
 .penguin-way img {
   max-width: 100%;
-}
-
-.values-container {
-  width: 100%;
-}
-
-.value {
-  margin: 0;
-  width:50%;
-  display:block;
-  float:left;
-  box-sizing: border-box;
-}
-
-.value:nth-child(2n + 0) {
-  float: right;
-}
-
-.value:after {
-  content: '';
-  width: 100%;
-  display: block;
-  height: 20px;
-  clear: both;
-  position: absolute;
-  float: left;
 }
 
 @media (max-width: 991px) {
@@ -540,6 +626,10 @@ h1.logo {
 
 .browser-circle:nth-child(3) {
   background: #3CD64A;
+}
+
+.browser .content-wrapper {
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -641,7 +731,6 @@ h1.logo {
 }
 
 
-
 /** 2.10 Footer */
 
 .footer {
@@ -691,6 +780,7 @@ h1.logo {
   }
 }
 
+
 /**
  ** 3. PRICING
  */
@@ -698,7 +788,6 @@ h1.logo {
 .pricing-table {
   background: url('../img/bg-pricing.svg') no-repeat center top #F0F6FB;
   background-size: contain;
-  transform: translateX(0);
   z-index: -2;
 }
 
@@ -720,12 +809,7 @@ h1.logo {
   background: white;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  margin-left: -1px;
   padding: 6rem;
-}
-
-.plan:first-of-type {
-  margin-left: 1px;
 }
 
 .plan strong {
@@ -773,6 +857,10 @@ h1.logo {
   margin-bottom: 0;
 }
 
+.plan h4 {
+  line-height: 1.3;
+}
+
 .text.period {
   color: #524E81;
   opacity: 1;
@@ -804,6 +892,40 @@ h1.logo {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 768px) {
+  .plan {
+    margin-left: -1px;
+  }
+  .plan:first-of-type {
+    margin-left: 1px;
+  }
+}
+
+@media (max-width: 991px) {
+  .plan {
+    padding: 4rem;
+  }
+  .plan.featured {
+    padding: 7rem 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-table {
+    background-size: 200%;
+  }
+  .plan {
+    padding: 3rem 0 4rem;
+  }
+  .plan.featured {
+    padding: 6rem 0 4rem;
+  }
+  .plan .details li {
+    margin-bottom: 1rem;
+  }
+}
+
+
 /**
  ** 4. BOILERPLATE
  */
@@ -811,6 +933,7 @@ h1.logo {
 .starter-info {
   z-index: -2;
 }
+
 
 /**
  ** 5. LAYOUT
