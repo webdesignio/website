@@ -32,20 +32,22 @@ html
     link(href=asset('/css/icons.css') rel='stylesheet')
 
   body
-    header.header
-      .container: .row
-        .col-sm-4.col-xs-12
-          h1.logo Webdesign.io
-        nav.header-nav.col-sm-8.col-xs-12.text-right
-          ul.list-inline
-            li
-              a(href) Pricing
-            li
-              a(href) Documentation
-            li
-              a(href) Log In
-            li(data-webdesignio-remove)
-              a#save(href) SAVE
+    
+    block navigation
+      header.header
+        .container: .row
+          .col-sm-4.col-xs-12
+            h1.logo Webdesign.io
+          nav.header-nav.col-sm-8.col-xs-12.text-right
+            ul.list-inline
+              li
+                a(href) Pricing
+              li
+                a(href) Documentation
+              li
+                a(href) Log In
+              li(data-webdesignio-remove)
+                a#save(href) SAVE
 
 
     block content

@@ -262,6 +262,15 @@ h1.logo {
   margin-left: 1rem;
 }
 
+.icon-large {
+  font-size: 7.5rem;
+  width: 100%;
+  text-align: center;
+  color: #8481A6;
+  line-height: 1.2 !important;
+  vertical-align: middle;
+}
+
 @media (max-width: 767px) {
   .header {
     padding: 3rem 15px 1rem;
@@ -652,6 +661,13 @@ h1.logo {
  ** 3. PRICING
  */
 
+.pricing-table {
+  background: url('../img/bg-pricing.svg') no-repeat center top #F0F6FB;
+  background-size: contain;
+  background-attachment: fixed;
+  transform: translateX(0);
+}
+
 .plan {
   border: 1px solid #C0BED9;
   background: white;
@@ -699,6 +715,41 @@ h1.logo {
 
 .plan.featured h2 {
   color: white;
+}
+
+.plan h2 {
+  margin-bottom: 0;
+}
+
+.text.period {
+  color: #524E81;
+  opacity: 1;
+  line-height: .75;
+}
+
+.plan.featured .text.period {
+  color: white;
+}
+
+.plan .text {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.plan strong {
+  color: black;
+}
+
+.plan.featured .text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.plan.featured strong {
+  color: white;
+}
+
+.plan .details li {
+  margin-bottom: 2rem;
 }
 
 /**
