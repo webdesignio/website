@@ -39,7 +39,7 @@ const middleware =
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 
-if (!pathname.match(/\/login$/)) {
+if (!pathname.match(/\/login\/?$/)) {
   client.fetch({ type, id })
     .then(r => {
       let res = r

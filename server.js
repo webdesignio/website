@@ -159,7 +159,9 @@ app.post('/api/v1/websites/build', (req, res) =>
   res.send({ ok: true })
 )
 
-app.post('/api/v1/tokens', (req, res) => res.send({ token: 'testtoken' }))
+app.post('/api/v1/tokens', (req, res) => {
+  res.send({ token: 'testtoken' })
+})
 
 app.use(express.static(`${__dirname}/static`))
 
@@ -175,6 +177,8 @@ app.get('/:type/:object', (req, res, next) => {
     .then(object => render(res, object))
     .catch(next)
 })
+
+app.post('/login', (req, res) => res.redirect('/'))
 
 app.get('/index', (req, res) => res.redirect('/'))
 
