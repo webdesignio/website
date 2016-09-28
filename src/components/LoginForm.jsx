@@ -95,9 +95,11 @@ function LoginForm ({
             <h5>E-Mail</h5>
           </label>
           <input
+            value={email}
             className='form-control text-center'
             type='text'
             disabled={isValidating || isRedirecting}
+            onChange={onChangeEmail}
           />
         </div>
       </div>
@@ -107,9 +109,11 @@ function LoginForm ({
             <h5>Password</h5>
           </label>
           <input
+            value={password}
             className='form-control text-center'
             type='password'
             disabled={isValidating || isRedirecting}
+            onChange={onChangePassword}
           />
         </div>
         <div className='forgot-link col-md-4 col-sm-3 text text-left text-xs-center mt-40 mt-xs-0 pt-10'>
