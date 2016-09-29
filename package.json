@@ -55,7 +55,7 @@
     "@webdesignio/client": "0.0.1",
     "@webdesignio/dozer": "0.0.2",
     "@webdesignio/floorman": "^1.1.0",
-    "@webdesignio/inplace": "^1.0.0",
+    "@webdesignio/inplace": "^1.2.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "babelify": "^7.3.0",
