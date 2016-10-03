@@ -116,9 +116,11 @@ function LoginForm ({
             onChange={onChangePassword}
           />
         </div>
-        <div className='forgot-link col-md-4 col-sm-3 text text-left text-xs-center mt-40 mt-xs-0 pt-10'>
-          <a href>forgot?</a>
-        </div>
+        {/*
+          <div className='forgot-link col-md-4 col-sm-3 text text-left text-xs-center mt-40 mt-xs-0 pt-10'>
+           <a href>forgot?</a>
+           </div>
+        */}
       </div>
       <div className='row'>
         <div className='col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 mt-20'>
