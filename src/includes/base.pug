@@ -31,6 +31,11 @@ html
     link(href=asset('/css/style.css') rel='stylesheet')
     link(href=asset('/css/icons.css') rel='stylesheet')
 
+    style.
+      .__slackin{
+        z-index:99999;
+      }
+
   body
 
     block navigation
@@ -53,6 +58,8 @@ html
                 a(href='https://www.github.com/webdesignio/webdesignio/wiki') Documentation
               //- li
                 a(href) Log In
+              li(style='padding-left:15px;')
+                script(async defer src="https://webdesignio-community.herokuapp.com/slackin.js")
               li(data-webdesignio-remove)
                 a#save(href) SAVE
 
