@@ -13,8 +13,8 @@ block content
       .row
         .btn-switch.col-sm-6.col-sm-offset-3.col-xs-10.col-xs-offset-1
           .row
-            .btn.col-xs-6.active Yearly Plans
-            .btn.col-xs-6 Monthly Plans
+            .btn.col-xs-6.active(data-target='.price--annualy') Billed Annualy
+            .btn.col-xs-6(data-target='.price--monthly') Billed Monthly
 
       .row.table-plans.pt-60.pt-xs-20
 
@@ -32,7 +32,10 @@ block content
 
         .productive.plan.col-sm-4.col-xs-10.col-xs-offset-1.text-center.featured
           h4 Productive <br> Penguin
-          h2 €49
+          .price--monthly
+            h2 €54
+          .price--annualy
+            h2 €49
           .text.period per month
           ul.details.list-unstyled.text.mt-60.mt-xs-40
             li <strong>3</strong> website
@@ -44,7 +47,10 @@ block content
 
         .powww.plan.col-sm-4.col-xs-10.col-xs-offset-1.text-center
           h4 Powww <br> Penguin
-          h2 €500
+          .price--monthly
+            h2 €550
+          .price--annualy
+            h2 €500
           .text.period per month
           ul.details.list-unstyled.text.mt-60.mt-xs-40
             li <strong>20</strong> website

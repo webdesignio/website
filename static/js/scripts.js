@@ -61,4 +61,28 @@ $(function() {
 		$(this).toggleClass('open');
 	});
 
+  // Pricing switcher
+
+  function showPrices(switcher) {
+    var btn = $(switcher).find('.btn[data-target]');
+    if (btn) {
+      $(btn).each(function() {
+        var target = $(this).data('target');
+        $(target).hide();
+        if ($(this).hasClass('active')) {
+          $($(this).data('target')).show();
+        }
+      });
+    }
+  };
+
+  $('.btn-switch .btn').click(function() {
+    $(this).siblings('.active').removeClass('active');
+    $(this).addClass('active');
+    showPrices('.btn-switch');
+  });
+
+  $('[class^="price--"]').hide();
+  showPrices('.btn-switch');
+
 })
