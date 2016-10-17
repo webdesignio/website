@@ -15,6 +15,10 @@ class DocContentContainer extends Component {
         return marked(content)
       }
     )
+    this.value = createSelector(
+      (state, { value }) => value,
+      value => value || [{ title: 'New entry', content: '' }]
+    )
     this.handlers = {
       onChangeTitle: this.onChangeField.bind(this, 'title'),
       onChangeContent: this.onChangeField.bind(this, 'content'),
@@ -31,11 +35,11 @@ class DocContentContainer extends Component {
   }
 
   onChangeField (field, e) {
-    const { value, params: { entry } } = this.props
+    const { params: { entry } } = this.props
     const entryIndex = Number(entry)
     const v = e.target.value
     this.props.onChange(
-      value.map((e, i) =>
+      this.value(this.state, this.props).map((e, i) =>
         i === entryIndex
           ? Object.assign({}, e, { [field]: v })
           : e
@@ -45,8 +49,10 @@ class DocContentContainer extends Component {
 
   onClickAddSection (e) {
     e.preventDefault()
-    const { value } = this.props
-    this.props.onChange(value.concat([{ title: 'New section', content: '' }]))
+    this.props.onChange(
+      this.value(this.state, this.props)
+        .concat([{ title: 'New section', content: '' }])
+    )
   }
 
   onClickToggleIsEditable (e) {
@@ -61,6 +67,7 @@ class DocContentContainer extends Component {
         {... this.state}
         {... this.handlers}
         html={this.html(this.state, this.props)}
+        value={this.value(this.state, this.props)}
       />
     )
   }

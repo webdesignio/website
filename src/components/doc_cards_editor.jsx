@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DocCardsEditor ({ isEditable = true, value = [] }) {
+export default function DocCardsEditor ({ isEditable = true, value }) {
   return (
     <div className='container'>
       <div className='row'>

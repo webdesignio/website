@@ -14,6 +14,7 @@ class DocCardsEditorContainer extends Component {
       <DocCardsEditor
         {... this.props}
         {... this.state}
+        value={this.props.value || []}
       />
     )
   }
