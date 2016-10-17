@@ -1,0 +1,32 @@
+extends ../includes/base
+
+block content
+  section.hero.hero-inner
+    .container: .row
+      .hero-text.text-center.pt-60.pt-xs-20.pb-60.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        h1.mb-20.mt-30(data-component='Inplace' data-props='{"name":"title"}') Documentation
+        h6.subheading.mt-0(data-component='Inplace' data-props='{"name":"title2"}')
+          | Get ready to take off
+
+  section.pt-100.pb-100
+    div(data-component='DocCardsEditor')
+    //- .container
+    //-   .row
+    //-     .col-md-3
+    //-       .panel.panel-default
+    //-         .panel-heading
+    //-           h4.panel-title Getting started
+    //-         .panel-body
+    //-           p
+    //-             | Get up and running as a webdesignio developer.
+    //-     .col-md-3
+    //-       .panel.panel-default
+    //-         .panel-heading
+    //-           h4.panel-title: a(href='#') CLI Commands
+    //-         .panel-body
+    //-           p
+    //-             | Reference about the various commands that our cli provides.
+    //-     .col-md-3
+    //-       .panel.panel-default
+    //-         .panel-heading
+    //-           h4.panel-title Developing Components

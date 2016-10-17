@@ -2,16 +2,16 @@
 
 import { parse } from 'url'
 import 'whatwg-fetch'
-import { compose, applyMiddleware } from 'redux'
+import { createStore, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import { findAll, renderAll, findAndRender } from '@webdesignio/floorman'
+import { findAll, renderAll } from '@webdesignio/floorman'
 import reduce from '@webdesignio/floorman/reducers'
 import createClient, { createContext } from '@webdesignio/client'
 
 import components from './components'
 
 const { pathname } = parse(location.href)
-const isObject = pathname.split('/').length >= 3
+const isObject = pathname.split('/').length >= 3 && !!pathname.split('/')[2]
 const type = isObject ? pathname.split('/')[1] : null
 const id = isObject ? pathname.split('/')[2] : (pathname.split('/')[1] || 'index')
 const isNew = !!pathname.match(/\/new$/)
@@ -44,12 +44,21 @@ if (!pathname.match(/\/login\/?$/)) {
     .then(r => {
       let res = r
       const { state } = res
-      const store = findAndRender(
-        components,
+      const store = createStore(
         saveStateReducer(reduce),
-        state,
+        Object.assign({}, state, {
+          isEditable: process.env.NODE_ENV === 'production'
+            ? !!token
+            : true
+        }),
         middleware
       )
+      renderAll(findAll(components), {
+        store,
+        isPublished: process.env.NODE_ENV === 'production'
+          ? !token
+          : false
+      })
       const saveButton = document.querySelector('#save')
       if (!saveButton) return
       saveButton.onclick = e => {

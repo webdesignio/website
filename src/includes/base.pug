@@ -77,9 +77,8 @@ html
                 a(href) Log In
               li
                 script(async defer src="https://webdesignio-community.herokuapp.com/slackin.js")
-              //- li(data-webdesignio-remove)
-              //-   a#save(href) SAVE
-
+              li(data-webdesignio-remove)
+                a#save(href) SAVE
 
     block content
 
@@ -113,7 +112,7 @@ html
           p.op-02 © Webdesign.io — All rights reserved.
 
     //- div(data-webdesignio-remove data-component='Toolbar')
-    script(data-webdesignio-remove src=asset('/client.js'))
+    script(src=asset('/client.js'))
     script(src=asset('/js/vendor/jquery.min.js'))
     script(src=asset('/js/scripts.js'))
 
