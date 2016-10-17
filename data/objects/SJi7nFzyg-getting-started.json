@@ -1,0 +1,31 @@
+{
+  "_id": "SJi7nFzyg-getting-started",
+  "fields": {
+    "entries": {
+      "values": {
+        "en": [
+          {
+            "title": "Setup",
+            "content": "*Insert setup instructions here*"
+          },
+          {
+            "title": "Going further",
+            "content": "*More in here*"
+          }
+        ]
+      }
+    },
+    "title": {
+      "values": {
+        "en": "Getting started"
+      }
+    },
+    "subtitle": {
+      "values": {
+        "en": "Get you started"
+      }
+    }
+  },
+  "type": "docs",
+  "website": "webdesignio"
+}

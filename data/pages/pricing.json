@@ -1,0 +1,12 @@
+{
+  "_id": "pricing",
+  "fields": {
+    "title2": {
+      "values": {
+        "en": "The starter product that includes everything you need. Prepare your website. Include all components you need. Bring it online. Change it online. Deploy it to static files at *.surge.sh website. And have fun!"
+      }
+    }
+  },
+  "name": "pricing",
+  "website": "webdesignio"
+}

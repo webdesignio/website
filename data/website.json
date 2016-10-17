@@ -1,0 +1,23 @@
+{
+  "_id": "webdesignio",
+  "users": [
+    "HyFaPPjK",
+    "Hyy-uPsY"
+  ],
+  "noLangFields": [
+    "logo"
+  ],
+  "fieldKeys": [
+    "logo",
+    "header"
+  ],
+  "fields": {
+    "logo": null,
+    "header": null
+  },
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "owner": "Hyy-uPsY"
+}

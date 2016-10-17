@@ -1,0 +1,27 @@
+{
+  "_id": "docs",
+  "fields": {
+    "cards": {
+      "values": {
+        "en": [
+          {
+            "title": "Getting started",
+            "href": "/docs/SJi7nFzyg-getting-started",
+            "content": [
+              "Get up and running as a webdesignio developer."
+            ]
+          },
+          {
+            "title": "CLI Commands",
+            "href": "/docs/new",
+            "content": [
+              "Reference about the various commands that our cli provides."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "website": "webdesignio",
+  "name": "docs"
+}

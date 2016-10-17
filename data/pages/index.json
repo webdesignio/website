@@ -1,0 +1,107 @@
+{
+  "_id": "index",
+  "fields": {
+    "content1p": {
+      "values": {
+        "en": "It is raining outside. You are in this hut in the forest, trying to keep your deadline and to get this amazingly designed website up and running. It seems to work on your local server but the one online is lacking some config and you are redirected in this loop for hours. All you see: that error in your browser. Just like the last two days. You are trying to reach for some help but your buddy has another version.<br><br>[4:46 am] It is still raining."
+      }
+    },
+    "content2p": {
+      "values": {
+        "en": "You're hanging out with your friends, eating ice cream sponsored by your customer Alfredo. You launched his website yesterday and the deadline would have been tomorrow. The website looks as good as in the design. You're giving two scoops of ice cream to your buddy Pablo, because he wrote this amazing ice-cream-configurator which you used in Alfredo's website.<br><br>You explain Alfredo how to edit the contents. He smiles. The sun is shining."
+      }
+    },
+    "way4": {
+      "values": {
+        "en": "Sharing tools, components and solutions. We share stories and our knowledge with whomever wants to join. We are welcoming people and are always open to learn. Sharing ideas. Community. Collaborating."
+      }
+    },
+    "way6": {
+      "values": {
+        "en": "Remove frustration. Compose reusable components that are reliable and have been tested in quality. Use tools that automate your workflow and minimize human errors."
+      }
+    },
+    "way8": {
+      "values": {
+        "en": "There are two kind of penguins. The one does the design and the other builds the components. They work perfectly together because they need each other."
+      }
+    },
+    "way10": {
+      "values": {
+        "en": "Ever entered an office where people are using webdesignio - You will feel it! In our community everybody knows how you feel and what challenges you're facing each day. For us webdesignio is the common basis."
+      }
+    },
+    "way12": {
+      "values": {
+        "en": "By focusing on what you like and do best, you will become more engaged and successful (according to GALLUP studies). Get inspired by the community. Stay motivated with a great system. Educate yourself and others."
+      }
+    },
+    "title": {
+      "values": {
+        "en": "Not just a better CMS"
+      }
+    },
+    "start3": {
+      "values": {
+        "en": "Use node.js version 6 or newer. Get it from:&nbsp;"
+      }
+    },
+    "way2": {
+      "values": {
+        "en": "We set out to create something more than just a better CMS. On land, penguins are clumsy but once they are in the water, they are agile and swim further than anybody else. Jump in the water with us! A community of penguins."
+      }
+    },
+    "way14": {
+      "values": {
+        "en": "Go with the flow. And never forget: Work should be fun! By using the most reliable web patterns (static pages) and combining them with new technologies like react, we free you from all the hassle, so that you can concentrate on your web project."
+      }
+    },
+    "start2": {
+      "values": {
+        "en": "This is still an early version. Work-in-progress. There might be further changes. Check the github page for more documentation. "
+      }
+    },
+    "feature2": {
+      "values": {
+        "en": "We have prebuild components to change contents like text or images. We like to make it easy to use. So there is no backend. Just apply some tags to your HTML and your users can change contents in the frontend."
+      }
+    },
+    "feature4": {
+      "values": {
+        "en": "After changin, we render the website in HTML and save it on a storage like S3 or any FTP server. This makes it super fast and even help your SEO."
+      }
+    },
+    "feature10": {
+      "values": {
+        "en": "You need another component? You are a developer? Just do it. You can develop any possible component use it, reuse it and even sell it to other designers if you want."
+      }
+    },
+    "feature8": {
+      "values": {
+        "en": "Two steps and you are ready to go. No database to install or any configs to do. Bring your website online with one command in seconds."
+      }
+    },
+    "feature6": {
+      "values": {
+        "en": "The application where you change the contents and the application that serves the websites to visitors are seperate. Using bulletproof static HTML pages makes it even more reliable."
+      }
+    },
+    "feature12": {
+      "values": {
+        "en": "Rendering static HTML pages and sacing them on a seperate CDN to serve to visitors makes your website scalable. Quite a lot ;-) Really."
+      }
+    },
+    "content1h2": {
+      "values": {
+        "en": "Are you frustrated with your current CMS?"
+      }
+    },
+    "content2h2": {
+      "values": {
+        "en": "A better way to build for the web. But also much more."
+      }
+    }
+  },
+  "website": "webdesignio",
+  "name": "index"
+}

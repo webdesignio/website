@@ -11,7 +11,5 @@
 /webdesignio.log
 /static/client.js
 /src/components/index.js
-/data/*
-!/data/.keep
 /mongod.log
 /assets.zip
