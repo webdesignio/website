@@ -37,7 +37,7 @@
   "license": "ISC",
   "dependencies": {
     "@webdesignio/client": "0.0.1",
-    "@webdesignio/dozer": "0.0.2",
+    "@webdesignio/dozer": "0.0.3",
     "@webdesignio/floorman": "^1.1.0",
     "@webdesignio/inplace": "^1.2.0",
     "babel-preset-es2015": "^6.14.0",
