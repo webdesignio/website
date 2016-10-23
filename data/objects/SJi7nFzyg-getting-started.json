@@ -18,7 +18,15 @@
           },
           {
             "title": "What next?",
-            "content": "In less than 5 minutes, you were able to create a website, deploy it online and edit the contents in the frontend.\n\n**We call that Penguin-Power :-)**\n\n### 5. What next?\n--------\n\nAs a next step, you will figure out how to use your own website or template.\n\nIt is really easy to become productive with webdesign.io. After 15 minutes, you will actually have your own website online and you will edit it.\n\nWhat we will go through:\n- Folder Structure (Where goes what?)\n- Asset Function (How to link to static files like *.css and *.js)\n- Components (How to make contents editable?)\n- Save (How to save changes?)\n- Default Contents and Data Contents\n\nWhen you're done, just deploy your changes with the `webdesignio deploy` command!\n"
+            "content": "In less than 5 minutes, you were able to create a website, deploy it online and edit the contents in the frontend.\n\n**We call that Penguin-Power :-)**\n\n### 5. What next?\n--------\n\nAs a next step, you will figure out how to use your own website or template.\n\nIt is really easy to become productive with webdesign.io. After 15 minutes, you will actually have your own website online and you will edit it.\n\nWhat we will go through:\n- Overview Structure (Where goes what?)\n- Asset Function (How to link to static files like *.css and *.js)\n- Components (How to make contents editable?)\n- Save (How to save changes?)\n- InnerHTML vs Contents\n\nWhen you're done, just deploy your changes with the `webdesignio deploy` command!\n"
+          },
+          {
+            "title": "Overview Structure",
+            "content": "### 6. Overview Structure\n--------\n\nGetting started with your own design!\n\nThe boilerplate comes with these folders:\n\n- `data/`     - Contains contents (json files) if you have changed sth. in the frontend.\n- `dist/`       - Containts folders for CMS-output. Don't change anything here.\n- `src/`         - All your HTML files go here!  \n- `static/`   - All static assets (Images, Css, Javascript, ...)\n\n#### HTML Files\n\n- `src/pages/` - Copy all your HTML files here.\n- `src/objects/` - Copy all your HTML files for Objects (e.g. single Blog-Post, single Project) here. [Read more about Objects](link to the card.)\n\n#### Static Files\n\n- `static/` - Copy all your Static files here.\n\nUse the asset-function (explained in the next step) to reference them.\n"
+          },
+          {
+            "title": "Asset Function",
+            "content": "### 7. Asset Function\n--------\n\nFiles under `static/` will be served directly unter `/`.\n\nE.g. `static/img/logo.png` will be served under `localhost:3000/img/logo.png` or in live under `https://www.webdesignio.com/img/logo.png`\n\nTo link the assets, use this \n```\n<!-- Include some CSS -->\n<link href=\"{{assets}}/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n<!-- Include some image -->\n<img src=\"{{assets}}/img/tralala.jpg\">\n\n<!-- Include some background-image -->\n<div class=\"mountain-1\" data-stellar-ratio=\"0.8\" style=\"background: url({{assets}}/img/mountain-1.svg) no-repeat center bottom;\"></div>\n\n<!-- Include some JavaScript -->\n<script src=\"{{assets}}/js/vendor/jquery.min.js\"></script>\n```"
           }
         ]
       }
