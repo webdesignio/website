@@ -5,12 +5,20 @@
       "values": {
         "en": [
           {
-            "title": "Setup",
-            "content": "*Insert setup instructions here*"
+            "title": "Install webdesign.io",
+            "content": "Before starting, you need to make sure your system has Node.js version 6 (or upper) installed. If it is not the case, please [install Node.js using this link](https://nodejs.org).\n\n### 1. Install webdesign.io CLI\n-------\nwebdesign.io CLI let you develop websites right on your local machine.\n\nWith the CLI, you can initialize a new site and start workin on it using any text editor. And thanks to webdesign.io built-in web server, you can preview the site with your computer's web browser without even setting up a database.\n\nThe CLI can also deploy sites to any webdesign.io Engine using the `webdesignio deploy` command. Your changes will immediately be reflected on that site without restarting or making any changes to the Engine server app.\n\nTo help you work faster, webdesign.io comes with pre-defined workflows like Pug (former JADE) and it easy to integrate it in your current flow. It also works well with source version control systems like git and svn.\n\n**Install webdesign.io**\n```\nnpm install -g @webdesignio/cli\n```"
           },
           {
-            "title": "Going further",
-            "content": "*More in here*"
+            "title": "Create a new site",
+            "content": "### 2. Create a new site\n-------\nWe start with creating a first website, using our webdesign.io-boilerplate.\n\n**Initialize a new website**\n```\nwebdesignio init <mywebsite>\n```\n\nFor practical reasons, we will use webdesignio.com as our deployment target but you're absolutely free to use your own Engine on EC2, Digital Ocean, Engine Yard, Linodes, Heroku or your own server. Don't forget, everything is open source here.\n\nIf you don't have an account, it will create one for you.\n\n> **NOTE**: Currently the CLI also creates an account for [surge.sh](https://surge.sh/) since this is our current way to upload to AWS S3.\n\n**Launch the webdesign.io server**\n```\nnpm start\n```\n\nOpen your browser at this address [http://localhost:3000/](http://localhost:3000/), you should see the boilerplate."
+          },
+          {
+            "title": "Deploy the site",
+            "content": "### 3. Deploy the site\n------\n\nNow we have a working site, we want to see it working online. That's the role of the webdesign.io engine.\n\n**Now, let's deploy our site!**\n```\nwebdesignio deploy\n```\nThat's it! The CLI will print the address, under which you can reach your website."
+          },
+          {
+            "title": "Modify the content",
+            "content": "### 4. Modify the live content of your site!\n--------\n\nGo to your *.webdesignio.com domain and sign in with the credentials you entered in the CLI.\n\nThen, you will see the boilerplate page. You can now edit contents by just clicking into it. Press \"Save\" to save and publish the changes.\n\nThat's it!"
           }
         ]
       }
@@ -22,7 +30,7 @@
     },
     "subtitle": {
       "values": {
-        "en": "Get you started"
+        "en": "Create a your first site in 5 minutes"
       }
     }
   },
